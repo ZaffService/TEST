@@ -4,17 +4,19 @@
   "description": "Système de gestion des cargaisons GP du Monde",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run php-server\" \"npm run json-server\" \"npm run watch-ts\"",
-    "php-server": "php -S localhost:8000 -t .",
+    "dev": "concurrently \"npm run serve\" \"npm run json-server\" \"npm run watch-ts\"",
+    "serve": "vite",
     "json-server": "json-server --watch db.json --port 3001",
     "watch-ts": "tsc --watch",
     "build": "tsc",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
     "concurrently": "^8.2.2",
-    "json-server": "^0.17.4"
+    "json-server": "^0.17.4",
+    "vite": "^5.0.0"
   },
   "dependencies": {}
 }
