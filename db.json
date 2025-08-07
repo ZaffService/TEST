@@ -1,0 +1,109 @@
+{
+  "cargaisons": [
+    {
+      "id": "CARG-2024-001",
+      "numero": "CARG-2024-001",
+      "poidsMax": 5000,
+      "lieuDepart": "Dakar",
+      "lieuArrivee": "Marseille",
+      "distanceKm": 4500,
+      "type": "maritime",
+      "etatAvancement": "en-attente",
+      "etatGlobale": "ouvert",
+      "produits": [
+        {
+          "libelle": "Ordinateurs",
+          "poids": 150,
+          "type": "materiel-incassable"
+        },
+        {
+          "libelle": "Vêtements",
+          "poids": 200,
+          "type": "alimentaire"
+        }
+      ],
+      "prixTotal": 35000
+    },
+    {
+      "id": "CARG-2024-002",
+      "numero": "CARG-2024-002",
+      "poidsMax": 2000,
+      "lieuDepart": "Paris",
+      "lieuArrivee": "New York",
+      "distanceKm": 6000,
+      "type": "aerienne",
+      "etatAvancement": "en-cours",
+      "etatGlobale": "ouvert",
+      "produits": [
+        {
+          "libelle": "Médicaments",
+          "poids": 50,
+          "type": "chimique",
+          "degreToxicite": "Faible"
+        }
+      ],
+      "prixTotal": 305000
+    },
+    {
+      "id": "CARG-2024-003",
+      "numero": "CARG-2024-003",
+      "poidsMax": 3000,
+      "lieuDepart": "Lyon",
+      "lieuArrivee": "Berlin",
+      "distanceKm": 1000,
+      "type": "routiere",
+      "etatAvancement": "arrive",
+      "etatGlobale": "ferme",
+      "produits": [
+        {
+          "libelle": "Meubles",
+          "poids": 500,
+          "type": "materiel-incassable"
+        }
+      ],
+      "prixTotal": 45000
+    }
+  ],
+  "colis": [
+    {
+      "id": "PKG-1700000000001-ABCDEF",
+      "code": "PKG-1700000000001-ABCDEF",
+      "status": "en-attente",
+      "cargoId": "CARG-2024-001",
+      "client": {
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "phone": "+33612345678",
+        "address": "10 Rue de la Paix, Paris",
+        "email": "jean.dupont@example.com"
+      },
+      "packageInfo": {
+        "count": 1,
+        "weight": 10,
+        "productType": "alimentaire",
+        "cargoType": "maritime",
+        "recipientContact": "marie.martin@example.com"
+      }
+    },
+    {
+      "id": "PKG-1700000000002-GHIJKL",
+      "code": "PKG-1700000000002-GHIJKL",
+      "status": "en-cours",
+      "cargoId": "CARG-2024-002",
+      "client": {
+        "nom": "Durand",
+        "prenom": "Sophie",
+        "phone": "+12125551234",
+        "address": "5th Avenue, New York",
+        "email": "sophie.durand@example.com"
+      },
+      "packageInfo": {
+        "count": 2,
+        "weight": 5,
+        "productType": "materiel-fragile",
+        "cargoType": "aerienne",
+        "recipientContact": "+12125555678"
+      }
+    }
+  ]
+}
