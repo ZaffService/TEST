@@ -14,6 +14,17 @@
               <a href="/enregistrement-colis" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Enregistrer Colis</a>
               <a href="/lister-cargaison" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Lister Cargaison</a>
               <a href="/outils-gestionnaire" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Outils Gestionnaire</a>
+              <?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
+              <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
+                  <span class="text-cyan-400 font-medium">Bonjour, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                  <a href="/logout" class="text-red-400 hover:text-red-300 transition-colors duration-300 font-medium">
+                      <i class="fas fa-sign-out-alt mr-1"></i>Déconnexion
+                  </a>
+              <?php else: ?>
+                  <a href="/login" class="text-orange-400 hover:text-orange-300 transition-colors duration-300 font-medium">
+                      <i class="fas fa-sign-in-alt mr-1"></i>Connexion
+                  </a>
+              <?php endif; ?>
           </div>
           <button class="md:hidden text-white p-2 hover:bg-gray-700 rounded-lg transition-colors duration-300"><i class="fas fa-bars text-xl"></i></button>
       </div>

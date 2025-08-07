@@ -8,10 +8,12 @@ import { Fragile } from './models/Fragile';
 import { Incassable } from './models/Incassable';
 import { Produit } from './models/Produit'; // Import Produit for type checking
 import { Cargaison, EtatAvancement, EtatGlobal, TypeCargaison } from './models/Cargaison';
+import { AuthManager } from './auth';
 
 const JSON_SERVER_URL = 'http://localhost:3001'; // URL de votre JSON Server
 
 document.addEventListener('DOMContentLoaded', () => {
+  const auth = AuthManager.getInstance();
 
   // --- Helper Functions ---
   async function fetchData<T>(url: string): Promise<T | null> {
